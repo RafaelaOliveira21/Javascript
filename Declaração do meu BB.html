@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Exercicio 9 </title>
+
+    <script>
+        function calcula() {
+            let saldo = Number(document.getElementById("saldo").value)
+            let credito = 0
+
+            if (saldo > 400) {
+                credito = 30
+            }
+            else if ((saldo <= 400) && (saldo > 300)) {
+                credito = 25
+            }
+            else if ((saldo <= 300) && (saldo > 200)) {
+                credito = 20
+            }
+            else if ((saldo <= 200) && (saldo > 0)) {
+                credito = 10
+            }
+            else {
+                credito = 0
+            }
+            // document.getElementById("resultado").innerHTML = `O crédito concedido é ${credito}%`
+            document.getElementById("resultado2").innerHTML = `TE AMO MIL MILHÕES \u2764`
+            document.getElementById("resultado").innerHTML = `Rafa...`
+        }
+
+
+
+    </script>
+
+    <style>
+        body {
+            background-color: #642ca9;
+            color: #ff36ab;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #geral {
+            margin: 60px auto;
+            width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #conteiner {
+            background-color: #ffb8de;
+            width: 400px;
+            height: 470px;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 40px;
+        }
+
+        h2 {
+            padding: 40px;
+        }
+
+        .entrada {
+            padding: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            padding: 6px;
+            border-radius: 8px;
+            background-color: #FF97CC;
+            color: #810045;
+        }
+
+        button {
+            padding: 8px;
+            width: 95px;
+            border-radius: 10px;
+            background-color: #9657e2;
+            color: #ffbcde;
+            margin-top: 30px;
+            border: none;
+            display: block;
+            margin: 0 auto;
+            font-weight: bold;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #8636e9;
+        }
+
+        #resultado, #resultado2 {
+           margin-top: 20px;
+            font-size: 40px;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="geral">
+    <h1> Exercício 9 </h1>
+    <div id="conteiner">
+        <h2> Digite o seu saldo médio: </h2>
+        <div class="entrada">
+            <label for="saldo"> Saldo: </label>
+            <input type="number" id="saldo" />
+        </div>
+        <div>
+            <button type="button" onclick="calcula()"> Calcular </button>
+        </div>
+        <div id="resultado"></div>
+        <div id="resultado2"></div>
+    </div>
+    </div>
+
+</body>
+
+</html>

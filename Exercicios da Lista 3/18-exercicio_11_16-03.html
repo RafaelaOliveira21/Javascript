@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <script>
+            function exer11(){
+                let saida = ""
+                let juros = 3
+                let precoFinal = 0
+                let valorParcela = 0
+                let preco = Number(prompt(`Informe o preço do carro`))
+                
+                for(let parcela = 6; parcela <= 60; parcela = parcela + 6){
+                    precoFinal = preco + (preco * 3) / 100
+                    valorParcela = precoFinal / parcela
+                    saida = saida + (`<tr> <td> ${parcela} </td> <td> Juros ${juros} </td> <td> Preço Final ${precoFinal.toFixed(2)} </td> <td> valor parcela ${valorParcela.toFixed(2)} </td> </tr>`)
+                    juros = juros + 3
+                }
+                document.getElementById("dadosTabela").innerHTML = saida
+            }
+        </script>
+            </script>
+    </head>
+    <body onload="exer11()">
+        <table border = "1">
+            <thead>
+                <tr>
+                    <th> Qtde Parcelas </th>
+                    <th> Juros </th>
+                    <th> Preço Final </th>
+                    <th> Valor parcela </th>
+                </tr>
+            </thead>
+            <tbody id = "dadosTabela">
+            </tbody>
+        </table>
+    </body>
+</html>

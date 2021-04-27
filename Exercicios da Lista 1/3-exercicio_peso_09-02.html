@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!--Cabeçalho de uma página HTML 5-->
+<html> <!--Elemento Raiz-->
+    <head> <!--Cabeçalho da página-->
+        <title> Cálculo do IMC </title> <!--Título da página (aba do navegador)-->
+        <meta charset="utf-8"/> <!--Sistema de codificação que aceita cedilha e acentos-->
+        <!-- aqui vem o JavaScript-->
+        <script>
+            function calcula(){
+                //​ Declarar variáveis
+                // Quando a variável recebe um valor, ela será do tipo do valor recebido
+                // let nome
+                // nome = "Marcos"  //Variável nome é uma string
+                // nome = 5        //Variável nome é um tipo inteiro
+                //nome = 2.1      //Variável nome é um tipo real
+                let peso, altura, imc  //observar que as variáveis não possuem tipo -A tipagem é dinâmica-​
+                // Vamos recuperar o peso e a altura informados pelo usuário
+                peso = document.getElementById("peso").value //Recuperar valor da caixa de entrada
+                altura = document.getElementById("altura").value //Recuperar o valro da caixa de entrada
+                // Vamos calcular o IMC
+                imc = (peso / (altura ** 2))
+                // Mostra o resultado para o usuário
+                document.getElementById("resultado").innerHTML = `O IMC é ${imc.toFixed(2)}`; 
+            } 
+                // innerHTML -> colocar um valor (texto) dentro de um elemento de marcação                     ​​
+        </script>
+    </head>
+    <body> <!--Corpo da página-->
+        <h1> Cálculo do IMC - Índice de Massa Corporal </h1> <!--Cabeçalho de nível 1--> 
+        </h2> Informe seu peso e sua altura </h2> <!--Cabeçalho de nível 2 -->
+        <!--Caixa de entrada de dados do usuário-->
+        <p> <!--Abertura de parágrafo-->
+            peso <input type="number" id="peso"/>
+        </p>
+        <p> <!--Abertura de parágrafo-->
+            altura <input type="number" id="altura"/>
+        </p>
+        <p> <!--Abertura de parágrafo-->
+            <button type="button" onClick= "calcula()"> calcula </button> <!--Botão que vai gerar um evento-->
+        </p>
+        <p id="resultado"> <!--Aqui virá o resultado--> <!--Abertura de parágrafo com identificador-->
+        </p>
+    </body>
+</html>    

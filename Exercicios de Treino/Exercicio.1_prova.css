@@ -1,0 +1,50 @@
+body {
+    background-image: url("WhatsApp\ Image\ 2021-04-16\ at\ 11.04.44.jpeg");
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+#container { 
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    padding: 100px; 
+    width: 100px; 
+    height: 10px;
+    padding-left: 450px; 
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+#geral {
+    background-image: url("tumblr_280246b43ccf85d95f77685c30b39b27_601610d2_1280.png");
+    text-align: center;
+    padding: 60px; 
+    width: 300px; 
+    height: 300px;
+    border:rgb(0, 0, 0) 5px solid;
+    border-radius: 35px;
+    margin-left: 450px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.dvm-button {
+    color: rgb(2, 2, 2);
+    background-image: url("tumblr_280246b43ccf85d95f77685c30b39b27_601610d2_1280.png");
+    border-radius: 70px;
+    height: 70px;
+    line-height: 30px;
+    padding: 20px;
+    font-weight: bolder;
+    text-transform: none;
+    cursor: auto;
+    font-size: 100%; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.dvm-button:hover {
+    transform: scale(1.05);
+}
+.dvm-circle {
+    margin: 20px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 65%;
+}

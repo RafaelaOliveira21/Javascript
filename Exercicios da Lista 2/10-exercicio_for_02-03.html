@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title> Exemplo de estrutura de repetição </title>
+    <script>
+        function exemplo(){
+        let nota
+        let soma = 0
+        for (let i = 1; i <= 10; i++){
+            soma = soma + Number(prompt(`Informe a nota ${i}`))    
+        }
+        let media = soma / 10
+        document.getElementById("exe1").innerHTML = `A média é ${media.toFixed(2)}`
+    }
+    </script>
+        <style>
+            body {
+                background-color: rgb(4, 196, 84);
+            }
+            #container {  
+                color: rgb(0, 0, 0); 
+                background-color: rgb(4, 196, 84);
+                padding-left: 500px; 
+                padding-top: 30px;
+            }
+            #geral {
+                background-color: rgb(158, 255, 162);
+                padding: 70px; /* espaçamento interno*/
+                width: 200px; /* largura */
+                height: 200px;
+                border:rgb(20, 126, 11) 5px solid;
+                border-radius: 30px;
+            }
+            .dvm-button {
+                color: rgb(255, 255, 255);
+                background-color: rgb(14, 194, 59);
+                border-radius: 100px;
+                height: 60px;
+                line-height: 30px;
+                padding: 0 20px;
+                text-transform: none;
+                font-weight: none;
+                cursor: auto;
+            }
+            .dvm-button:hover {
+                transform: scale(1.10);
+            }
+            .dvm-circle {
+                margin: 20px;
+                background-color: black;
+                color: rgb(255, 255, 255);
+                padding: 20px;
+                border-radius: 60%;
+            }
+        </style>
+</head>
+<body>
+    <div id="container"> <!-- divisão de área -->
+    <div id="geral"> <!-- divisão de área -->
+        <h2> Clique no botão abaixo para iniciar o programa </h2>
+        <div>
+            <button type="button" class="dvm-button" 
+            class="dvm-button:hover" class="dvm-circle" onclick="exemplo()"> Exemplo </button>
+            <div id="exe1"> </div>
+        </div>
+    </div>
+    </div>    
+</body>
+</html>

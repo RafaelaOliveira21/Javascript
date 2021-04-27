@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function calcula(){
+            let idade = Number(document.getElementById("idade").value)
+            let peso = Number(document.getElementById("peso").value)
+            let grupo
+            if (idade < 20){
+                if (peso < 60){
+                    grupo = 9
+                }
+                else if (peso <= 90){
+                    grupo = 8
+                }
+                else {
+                    grupo = 7
+                }
+            }
+            else if (idade <= 50){
+                if (peso < 60){
+                    grupo = 6
+                }
+                else if (peso <= 90){
+                    grupo = 5
+                }
+                else {
+                    grupo = 4
+                }  
+            }
+            else if (peso < 60){
+                    grupo = 3
+                }
+                else if (peso <= 90){
+                    grupo = 2
+                }
+                else {
+                    grupo = 1
+                }
+            document.getElementById("resultado").innerHTML = `Grupo de risco ${grupo}`
+        }    
+    </script>
+    <style>
+        body {
+            background-color: rgb(0, 153, 255);
+        }
+        #container {  
+           color: rgb(13, 0, 134);  
+           background-color: rgb(0, 153, 255);
+           padding-left: 500px; 
+           padding-top: 20px;
+        }
+        #geral {
+            background-color: rgb(127, 205, 250);
+            padding: 50px; /* espaçamento interno */
+            width: 250px; /* largura */
+            border-radius: 20px;
+        }
+        #resultado{
+            margin-top: 30px; /* espaçamento externo acima */ 
+            margin-bottom: 30px; /* espaçamento externo abaixo */
+            color: rgb(5, 5, 5); /* cor do texto */
+        }
+        .dvm-button {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 38, 255);
+            border-radius: 100px;
+            height: 60px;
+            line-height: 30px;
+            padding: 0 20px;
+            text-transform: none;
+            font-weight: none;
+            cursor: auto;
+        }
+        .dvm-button:hover {
+            transform: scale(1.10);
+        }
+        .dvm-circle {
+            margin: 20px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 60%;
+       }
+    </style>
+</head>
+<body>
+    <div id="container"> <!-- divisão de área -->
+    <div id="geral"> <!-- divisão de área -->
+    <div>
+        <h2> Exercicio 22 da lista 2 </h2>
+            <h3> Informe a Idade <input type="number" id="idade"> </h3>
+            <h3> Informe o Peso <input type="number" id="peso"> </h3>  
+        </div>
+            <div>
+            <button type="button" class="dvm-button" 
+            class="dvm-button:hover" class="dvm-circle" onclick="calcula()"> Calcular </button>
+            </div>
+        <h3><div id="resultado"> </div> </h3>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

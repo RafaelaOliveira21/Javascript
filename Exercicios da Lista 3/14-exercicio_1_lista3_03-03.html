@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercício 1 da lista 2 </title>
+    <script>
+        function exercicio1(){
+            let contador = 1
+            while (contador <= 5){
+
+                let a = Number (prompt(`Informe o valor de A`))
+                let b = Number (prompt(`Informe o valor de B`)) 
+                let c = Number (prompt(`Informe o valor de C`))
+                let d = Number (prompt(`Informe o valor de D`))
+
+                let x = a
+                let y = b
+                let z = c
+                let w = d
+                let i = 1
+                let aux // variavel auxiliar para a troca
+
+                while (i <= 3){
+                    if (x > y){
+                        aux = x
+                        x = y
+                        y = aux
+                    }
+                    if (y > z){
+                        aux = y
+                        y = z
+                        z = aux
+                    }
+                    if (z > w){
+                        aux = z
+                        z = w
+                        w = aux
+                    }
+                    i++ //incrementa i
+                }
+                contador++
+                document.getElementById("resultado1").innerHTML += `</br> Valores que foram digitados: ${a}, ${b}, ${c}, ${d} </br>
+                </br> Valores em forma crescente: ${x}, ${y}, ${z}, ${w} </br>
+                </br> Valores em forma decrescente: ${w}, ${z}, ${y}, ${x} </br>`          
+            }        
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(109, 243, 243);
+            text-align: center;
+        }
+        #container {  
+            color: rgb(0, 0, 0); 
+            background-color: rgb(109, 243, 243);
+            padding-left: 500px; 
+            padding-top: 30px;
+        }
+        #geral {
+            background-color: rgb(169, 248, 248);
+            padding: 70px; 
+            width: 200px; 
+            height: 100%;
+            border:rgb(1, 192, 167) 5px solid;
+            border-radius: 30px;
+        }
+        .dvm-button {
+            color: rgb(0, 0, 0);
+            background-color: rgb(7, 221, 221);
+            border-radius: 100px;
+            height: 60px;
+            line-height: 30px;
+            padding: 0 20px;
+            text-transform: none;
+            font-weight: none;
+            cursor: auto;
+        }
+        .dvm-button:hover {
+            transform: scale(1.05);
+        }
+        .dvm-circle {
+            margin: 20px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"> 
+    <div id="geral">   
+        <h2> Clique no botão abaixo para iniciar o programa </h2>
+                <div>
+                <button type="button" class="dvm-button" 
+                class="dvm-button:hover" class="dvm-circle" onclick="exercicio1()"> Exercicio 1 </button>
+                </div>
+        <h3 id = "resultado1"> </h3>
+    </div>
+    </div>        
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercicio 23 </title>
+    <script>
+        function exemplo(){
+            let opcao
+            let salario
+            let novoSalario = 0
+            let ferias
+            let meses
+            let terceiro
+
+            do {
+                opcao = Number(prompt(`Digite 1. Novo Salário, 2. Férias, 3. Décimo Terceiro ou 4. Sair`))
+                switch(opcao){
+                    case 1:
+                        salario = Number(prompt(`Informe o salário`))
+                        if (salario < 210){
+                            novoSalario = salario + (salario * 15) / 100
+                        }
+                        else if (salario <= 600){
+                            novoSalario = salario + (salario * 10) / 100
+                        }
+                        else {
+                            novoSalario = salario + (salario * 5) / 100
+                        }
+                        alert(`O novo salário é de ${novoSalario.toFixed(2)}`)
+                        break
+                    case 2: 
+                        salario = Number(prompt(`Informe o salário`))
+                        ferias = salario + 1/3 * (salario) 
+                        alert(`O salário das férias é de ${ferias.toFixed(2)}`)
+                        break
+                    case 3: 
+                        salario = Number(prompt(`Informe o sálario`))
+                        meses = Number(prompt(`Informe o numero de meses`))
+                        terceiro = (meses / 12) * salario
+                        alert (`O decimo terceiro é de ${terceiro.toFixed(2)}`)
+                        break
+                    case 4: alert (`O programa será encerrado`)
+                        break
+                    default: alert ("Opção Inválida")            
+                }
+            }
+            while (opcao != 4)           
+        }
+    </script>
+            <style>
+                body {
+                    background-color: rgb(205, 152, 255);
+                    text-align: center;
+                }
+                #container {  
+                    color: rgb(0, 0, 0); 
+                    background-color: rgb(205, 152, 255);
+                    padding-left: 500px; 
+                    padding-top: 30px;
+                }
+                #geral {
+                    background-color: rgb(228, 198, 255);
+                    padding: 60px; 
+                    width: 300px; 
+                    height: 200px;
+                    border:rgb(0, 0, 0) 5px solid;
+                    border-radius: 30px;
+                }
+                table {
+                    margin-top: 20px;
+                }
+                td {
+                    width: 100px;
+                    height: 20px;
+                }
+                .dvm-button {
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(143, 44, 255);
+                    border-radius: 100px;
+                    height: 60px;
+                    line-height: 30px;
+                    padding: 0 20px;
+                    text-transform: none;
+                    font-weight: none;
+                    cursor: auto;
+                }
+                .dvm-button:hover {
+                    transform: scale(1.05);
+                }
+                .dvm-circle {
+                    margin: 20px;
+                    background-color: black;
+                    color: rgb(255, 255, 255);
+                    padding: 20px;
+                    border-radius: 60%;
+                }
+            </style>
+</head>
+<body>
+    <div id="container">
+    <div id="geral">
+        <h2> Clique no botão abaixo para iniciar o programa </h2>
+            <div>
+                <button type="button" class="dvm-button" 
+                class="dvm-button:hover" class="dvm-circle" onclick="exemplo()"> Exercicio 23 </button>
+            </div>
+    </div>
+    </div>         
+</body>
+</html>

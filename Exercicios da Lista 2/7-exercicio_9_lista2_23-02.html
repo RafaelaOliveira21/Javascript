@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <style> 
+        body {
+            background-color: rgb(0, 153, 255);
+        }
+        #container {  
+           color: rgb(13, 0, 134);  
+           background-color: rgb(0, 153, 255);
+           padding-left: 500px; 
+           padding-top: 20px;
+        }
+        #geral {
+            background-color: rgb(127, 205, 250);
+            outline: rgb(0, 17, 255) 3px solid; /* borda */
+            padding: 50px; /* espaçamento interno */
+            width: 250px; /* largura */
+        }
+        #resultado{
+            margin-top: 30px; /* espaçamento externo acima */ 
+            margin-bottom: 30px; /* espaçamento externo abaixo */
+            color: rgb(5, 5, 5); /* cor do texto */
+        }
+    </style>   
+        <title> Exercício 9 da lista 2 </title>
+    <script>
+        function calcula(){
+            //recupera o valor do usuário
+            let saldo = Number(document.getElementById('saldo').value)
+            let credito = 0
+            if (saldo > 400){
+                credito = (saldo*30)/100
+            }
+            else if ((saldo <= 400) && (saldo > 300)){
+                credito = (saldo*25)/100
+            }
+            else if ((saldo <= 300) && (saldo > 200)){
+                credito = (saldo*20)/100
+            }
+            else if ((saldo <= 200) && (saldo > 0)){
+                credito = (saldo*10)/100
+            }
+            else {
+                credito = 0
+            }
+            document.getElementById("resultado").innerHTML = `O crédito concedido é de ${credito}`
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="container"> <!-- divisão de área -->
+    <div id="geral"> <!-- divisão de área -->
+        <div>
+            <h2> Exercício 9 da lista 2 </h2>
+            <div>
+                <label> Saldo médio </label>
+                <input type="number" id="saldo"/>
+            </div>
+            <div>
+                <button type="button" onclick="calcula()"> Calcula </button>
+            </div>
+            <div id="resultado">
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

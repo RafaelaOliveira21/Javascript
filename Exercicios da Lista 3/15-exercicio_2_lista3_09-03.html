@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercicio 2 da lista 3 </title>
+    <script>
+        function exercicio2(){
+            let preco = 5.0
+            let qtde = 120
+            let lucro = (preco * qtde) - 200
+            let maiorLucro = lucro
+            let dadosTabela = "" //conteudo da tabela
+
+            while (preco >= 1.0){
+                dadosTabela = dadosTabela + `<tr> <td> ${preco} </td> <td> ${qtde} </td> <td> 200 </td> <td> ${lucro} </td> </tr>`
+                preco = preco - 0.50 //caindo
+                qtde = qtde + 26 //subindo
+                lucro = (preco * qtde) - 200
+
+                if (lucro > maiorLucro){ //achamos um novo maiorLucro
+                    maiorLucro = lucro //troca o maiorLucro
+                }
+            }
+            document.getElementById("dadosTabela").innerHTML = dadosTabela
+            alert(`Maior Lucro ${maiorLucro}`)
+        }
+    </script>
+        <style>
+            body {
+                background-color: rgb(205, 152, 255);
+                text-align: center;
+            }
+            #container {  
+                color: rgb(0, 0, 0); 
+                background-color: rgb(205, 152, 255);
+                padding-left: 500px; 
+                padding-top: 30px;
+            }
+            #geral {
+                background-color: rgb(228, 198, 255);
+                padding: 60px; 
+                width: 300px; 
+                height: 400px;
+                border:rgb(0, 0, 0) 5px solid;
+                border-radius: 30px;
+            }
+            table {
+                margin-top: 20px;
+            }
+            td {
+                width: 100px;
+                height: 20px;
+            }
+            .dvm-button {
+                color: rgb(255, 255, 255);
+                background-color: rgb(143, 44, 255);
+                border-radius: 100px;
+                height: 60px;
+                line-height: 30px;
+                padding: 0 20px;
+                text-transform: none;
+                font-weight: none;
+                cursor: auto;
+            }
+            .dvm-button:hover {
+                transform: scale(1.05);
+            }
+            .dvm-circle {
+                margin: 20px;
+                background-color: black;
+                color: rgb(255, 255, 255);
+                padding: 20px;
+                border-radius: 60%;
+            }
+        </style>
+</head>
+<body>
+    <div id="container">
+    <div id="geral">
+    <h2> Clique no botão abaixo para iniciar o programa </h2>
+        <div>
+            <button type="button" class="dvm-button" 
+            class="dvm-button:hover" class="dvm-circle" onclick="exercicio2()"> Exercicio 2 </button>
+        </div>
+        <table border="1"> <!--tabela-->
+            <thead>
+                <tr> <!--table row é a criação de uma linha-->
+                    <th> <!--table header é a coluna de cabeçalho-->
+                        Preço
+                    </th>
+                    <th>
+                        Qtde
+                    </th>
+                    <th>
+                        Desconto
+                    </th>
+                    <th>
+                        Lucro
+                    </th>
+                </tr>
+            </thead>
+            <tbody id = "dadosTabela">  
+            </tbody>
+        </table>
+    </div>
+    </div>    
+</body>
+</html>

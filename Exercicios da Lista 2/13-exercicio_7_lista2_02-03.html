@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title> Exemplo de estrutura de repetição </title>
+    <script>
+    function exe7(){
+        let idade, altura, peso
+        let idade50 = 0
+        let idade10e20 = 0
+        let peso40 = 0
+        let conta = 0
+        for(let i = 1; i <= 5; i++){ 
+            idade = Number (prompt(`Informe a idade`))
+            altura = Number (prompt(`Informe a altura`)) 
+            peso = Number (prompt(`Informe a peso`))
+                if (idade > 50){
+                    idade50++
+                }
+                if ((idade >= 10) && (idade <= 20)){
+                    idade10e20 = idade + altura
+                    conta++
+                }
+                if (peso < 40){
+                    peso40++
+                }
+            }
+        document.getElementById("exe7").innerHTML = `</br> Resposta 1 - ${idade50}
+        </br> Resposta 2 - ${idade10e20/conta} </br> Resposta 3 - ${peso40 / 5*100}`   
+    }
+    </script>
+        <style>
+            body {
+                background-color: rgb(255, 96, 170);
+            }
+            #container {  
+                color: rgb(0, 0, 0); 
+                background-color: rgb(255, 96, 170);
+                padding-left: 500px; 
+                padding-top: 30px;
+            }
+            #geral {
+                background-color: rgb(253, 167, 227);
+                padding: 70px; /* espaçamento interno*/
+                width: 200px; /* largura */
+                height: 200px;
+                border:rgb(199, 0, 116) 5px solid;
+                border-radius: 30px;
+            }
+            .dvm-button {
+                color: rgb(255, 255, 255);
+                background-color: rgb(255, 0, 140);
+                border-radius: 100px;
+                height: 60px;
+                line-height: 30px;
+                padding: 0 20px;
+                text-transform: none;
+                font-weight: none;
+                cursor: auto;
+            }
+            .dvm-button:hover {
+                transform: scale(1.10);
+            }
+            .dvm-circle {
+                margin: 20px;
+                background-color: black;
+                color: rgb(255, 255, 255);
+                padding: 20px;
+                border-radius: 60%;
+            }
+        </style>
+</head>
+<body>
+    <div id="container"> <!-- divisão de área -->
+    <div id="geral"> <!-- divisão de área -->
+        <h2> Clique no botão abaixo para iniciar o programa </h2>   
+        <div>
+            <button type="button" class="dvm-button" 
+            class="dvm-button:hover" class="dvm-circle" onclick="exe7()"> Exercicio 7 </button>
+            <div id="exe7"> </div>
+            </div>
+    </div>
+    </div>        
+</body>
+</html>

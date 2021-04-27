@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <style> 
+        body {
+            background-color: rgb(0, 153, 255);
+        }
+        #container {  
+           color: rgb(13, 0, 134);  
+           background-color: rgb(0, 153, 255);
+           padding-left: 500px; 
+           padding-top: 20px;
+        }
+        #geral {
+            background-color: rgb(127, 205, 250);
+            outline: rgb(0, 17, 255) 3px solid; /* borda */
+            padding: 50px; /* espaçamento interno */
+            width: 250px; /* largura */
+        }
+        #resultado{
+            margin-top: 30px; /* espaçamento externo acima */ 
+            margin-bottom: 30px; /* espaçamento externo abaixo */
+            color: rgb(5, 5, 5); /* cor do texto */
+        }
+    </style>
+    <script>
+        function calcula(){
+            //recupera os valores digitados
+            let nro1 = Number(document.getElementById("nro1").value)
+            let nro2 = Number(document.getElementById("nro2").value)
+            //recupera a opção digitada
+            let opcao = Number(document.getElementById("opcao").value)
+            /* if (opcao == 1){
+            }
+            else if (opcao == 2){
+            }
+            else if (opcao == 3){
+            }
+            else if (opcao == 4){
+            }
+            else {
+            } */
+            switch(opcao){
+                case 1: resultado = (nro1 + nro2) / 2
+                    break // sai do switch e não entra nos cases abaixo
+                case 2: if (nro1 >= nro2){
+                        resultado = nro1 - nro2
+                }
+                else {
+                        resultado = nro2 - nro1
+                } 
+                    break
+                case 3: resultado = nro1 * nro2
+                    break
+                case 4: if (nro2 != 0){ // != é o comando diferente em JS
+                        resultado = nro1 / nro2
+                }
+                        else {
+                        resultado = `Não é possivel dividir por zero`
+                }
+                    break
+                default: resultado = `Opção inválida, tente novamente`       
+            }
+            document.getElementById("resultado").innerHTML = `O resultado da operação é ${resultado}`
+        }
+    </script>
+</head>
+<body>
+    <div id="container"> <!-- divisão de área -->
+    <div id="geral"> <!-- divisão de área -->
+        <div>
+            <h3> Exercicio 5 da lista 2 </h3>
+        <div>
+            <label for= "nro1"> Informe o número 1 </label>
+            <input type="number" id="nro1">
+        </div>
+        <div>
+            <label for= "nro2"> Informe o número 2 </label>
+            <input type="number" id="nro2">
+        </div>
+        <div>
+            <label for="opcao"> Informe a opção desejada </label>
+            <input type="number" id="opcao"/>
+        </div>
+        <div>
+            <button type="button" onclick="calcula()"> Calcular </button>
+        </div>
+        <div id="resultado"></div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

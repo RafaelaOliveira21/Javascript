@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title> Exemplo de estrutura de repetição </title>
+    <script>
+    function exe3(){
+        let f1 = 0
+        let f2 = 0; let f3 = 0; let f4 = 0; let f5 = 0;
+        for (let i = 1; i <= 8; i++){
+            let idade = Number(prompt(`Informe a idade ${i}`))
+            if(idade <= 15){
+                f1++
+            }
+            else if (idade <= 30){
+                f2++
+            }
+            else if (idade <= 45){
+                f3++
+            }
+            else if (idade <= 60){
+                f4++
+            }
+            else {
+                f5++
+            }
+        }
+        document.getElementById("exe3").innerHTML = `</br> Faixa 1: ${f1} </br> Faixa 2: ${f2}
+        <br> Faixa 3: ${f3} </br> Faixa 4: ${f4} </br> Faixa 5: ${f5} </br> Média Faixa 1 é: ${f1/8*100} </br> Média Faixa 5 ${f5/8*100}`    
+    }
+    </script>
+    <style>
+        body {
+            background-color: rgb(0, 153, 255);
+        }
+        #container {  
+            color: rgb(13, 0, 134); 
+            background-color: rgb(0, 153, 255);
+            padding-left: 500px; 
+            padding-top: 30px;
+        }
+        #geral {
+            background-color: rgb(127, 205, 250);
+            padding: 70px; /* espaçamento interno*/
+            width: 200px; /* largura */
+            height: 300px;
+            border:rgb(0, 4, 255) 5px solid;
+            border-radius: 30px;
+        }
+        .dvm-button {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 38, 255);
+            border-radius: 100px;
+            height: 60px;
+            line-height: 30px;
+            padding: 0 20px;
+            text-transform: none;
+            font-weight: none;
+            cursor: auto;
+        }
+        .dvm-button:hover {
+            transform: scale(1.10);
+        }
+        .dvm-circle {
+            margin: 20px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"> <!-- divisão de área -->
+    <div id="geral"> <!-- divisão de área -->
+        <h2> Clique no botão abaixo para iniciar o programa </h2>
+        <div>
+            <button type="button" class="dvm-button" 
+            class="dvm-button:hover" class="dvm-circle" onclick="exe3()"> Exercicio 3 </button>
+            <div id="exe3"> </div>
+        </div>
+    </div>
+    </div>    
+</body>
+</html>

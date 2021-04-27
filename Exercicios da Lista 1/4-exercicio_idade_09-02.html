@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!--Cabeçalho de uma página HTML 5-->
+<html> <!--Elemento Raiz-->
+    <head> <!--Cabeçalho da página-->
+        <title> Cálculo de Idade </title> <!--Título da página (aba do navegador)-->
+        <meta charset="utf-8"/> <!--Sistema de codificação que aceita cedilha e acentos-->
+        <style>
+          body {
+            background-color: rgb(253, 184, 242);
+            color: rgb(255, 0, 106);
+            font: normal 20pt;
+        }
+        h1 {
+            color: rgb(41, 2, 41);
+        } 
+        </style>
+        <!-- aqui vem o JavaScript-->
+        <script>
+            function calcular(){
+                //​Declarar variáveis
+                let idade, anoAtual, anoNascimento, meses, semanas, dias  //observar que as variáveis não possuem tipo -A tipagem é dinâmica-​
+                //Vamos recuperar os anos, meses, semanas e dias informados pelo usuário
+                idade = document.getElementById("idade").value //Recuperar valor da caixa de entrada
+                meses = document.getElementById("meses").value //Recuperar valor da caixa de entrada
+                semanas = document.getElementById("semanas").value //Recuperar valor da caixa de entrada
+                anoAtual = document.getElementById("anoAtual").value //Recuperar valor da caixa de entrada
+                anoNascimento = document.getElementById("anoNascimento").value //Recuperar o valor da caixa de entrada
+                // Vamos calcular 
+                idade = (anoAtual-anoNascimento)
+                meses = (idade*12)
+                semanas = (idade*52)
+                dias = (idade*365)
+                // Mostra o resultado para o usuário
+                document.getElementById("idade").innerHTML = `Idade = ${idade}`;
+                document.getElementById("meses").innerHTML = `Idade em meses = ${meses}`;
+                document.getElementById("semanas").innerHTML = `Idade em semanas = ${semanas}`;
+                document.getElementById("dias").innerHTML = `Idade em dias = ${dias}`;
+                document.getElementById("resultado").innerHTML = `A idade é ${idade.toFixed(2)}`
+            } 
+                // innerHTML -> colocar um valor (texto) dentro de um elemento de marcação                     ​​
+        </script>
+    </head>
+    <body> <!--Corpo da página-->
+        <h1> Calculando a Idade do Usuário </h1> <!--Cabeçalho de nível 1--> 
+        </h2> Informe seu ano de nascimento </h2> <!--Cabeçalho de nível 2 -->
+        <!--Caixa de entrada de dados do usuário-->
+        <p> <!--Abertura de parágrafo-->
+            Ano Atual <input type="number" id="anoAtual"/>
+        </p>
+        <p> <!--Abertura de parágrafo-->
+            Ano de Nascimento <input type="number" id="anoNascimento"/>
+        </p>
+        <p> <!--Abertura de parágrafo-->
+            <button type="button" onClick= "calcular()"> calcular </button> <!--Botão que vai gerar um evento-->
+        </p>
+        <p id = "idade">
+        <p/>
+        <p id = "meses">    
+        </p>
+        <p id = "semanas">     
+        </p>
+        <p id = "dias">
+        </p>
+        <p id="resultado"> <!--Aqui virá o resultado--> <!--Abertura de parágrafo com identificador-->
+        </p>
+    </body>
+</html>    
